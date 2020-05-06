@@ -1,0 +1,95 @@
+<!-- Graphics Example Code.  index.html - The web page document containing the canvas (drawing surface), that launches your javascript files. //-->
+<!DOCTYPE html>
+<html lang="En">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" href="assets/fav.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script> window.tiny_graphics = {};
+        // Store all our JavaScipt code inside of classes here.
+        window.classes = {}
+    </script>
+
+    <script type="text/javascript" src="tiny-graphics.js"></script>
+    <!--  Javascript "include" files.  Any code in them gets executed as part of the page loading. //-->
+    <script type="text/javascript" src="dependencies.js"></script>
+    <script type="text/javascript" src="main-scene.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="gui.js"></script>
+    <script type="text/javascript" src="load.js"></script>
+
+
+</head>
+
+<body onload="onLoad()">
+<!-- Begin typing the next of your web page here. //-->
+    
+    <div class="screen-container">
+        <!-- Start Menu //-->
+        <div id="menu" style="display:block" class="start-menu">
+            <img src="assets/8ball_graphic.png" class="logo">
+            <button onclick="gui.setupGame()" class="play-btn main-btn">Play Game</button>
+        </div>
+
+        <!-- Game Screen //-->
+        <div id="game-canvas" style="display:none"></div>
+
+        <!-- Player HUD //-->
+        <div id="HUD" style="display:none" class="playerHUD">
+            <div class="player player1 unknown">
+              <h6>Player 1 <span></span></h6>
+              <ul>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+              </ul>
+            </div>
+
+            <div class="player player2 unknown">
+              <h6>Player 2 <span></span></h6>
+              <ul>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+                <li>?</li>
+              </ul>
+            </div>
+
+            <div id="end-screen" style="display:none">
+                <h1>Game Over</h1>
+                <p id="statement">Player 2 Wins!</p>
+                <button onclick="gui.resetGame()" class="reset-btn main-btn">Reset Game</button>
+            </div>
+
+            <div id="turn-screen">
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/right_arrow.png" id="left-arrow" style="display:none" class="left-arrow">
+                    </div>
+                    <div class="col">
+                       <h4 id="turn-statement"></h4>
+                       <h5 id="scratch-statement"></h4>
+                    </div>
+                    <div class="col">
+                        <img src="assets/left_arrow.png" id="right-arrow" style="display:none" class="right-arrow" align="right">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const scenes = ["Billiards_Game"];
+        new Canvas_Widget("game-canvas", scenes, [ 1080, 640 ]);
+    </script>
+</body>
+</html>
