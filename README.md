@@ -17,4 +17,5 @@ My other group members were responsible for:
 ## To play the game
 
 Run the executable host.command using your terminal for Mac users. For Windows, run host.bat.
+
 Then open up localhost:8000 on your browser and enjoy!
