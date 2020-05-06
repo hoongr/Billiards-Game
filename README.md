@@ -6,7 +6,7 @@ This was a group project done for my Computer Graphics course. We built a 8-ball
 I was reponsible for the following:
 * Game logic (game.js, gui.js)
 * Game play display + user interface (index.css, index.html)
-* Modeling of the pool balls (Billiards_Game of main-scene.js)
+* Modeling of the pool balls (Billiards_Game class of main-scene.js)
 
 My other group members were responsible for:
 * Physics behind collisions
