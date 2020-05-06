@@ -1,6 +1,6 @@
 # Billiards Game
 
-This was a group project done for my Computer Graphics course. We built a 8-ball pool game using JavaScript and the tiny-graphics library.
+This was a 3-person group project done for my Computer Graphics course. We built a 8-ball pool game using JavaScript and the tiny-graphics library.
 
 ## Contributions
 I was reponsible for the following:
